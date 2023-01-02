@@ -10,7 +10,7 @@ jobs:
     name: Cut full version tag
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
       - uses: kobtea/release-tag-action@master
@@ -18,7 +18,7 @@ jobs:
     name: Cut major version tag
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
       - uses: kobtea/release-tag-action@master
