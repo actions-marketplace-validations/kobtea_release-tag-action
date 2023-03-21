@@ -1,5 +1,5 @@
 #!/bin/sh
-version=${INPUT_PREFIX}$($INPUT_ONLY_MAJOR_VERSION && (cat VERSION | cut -d. -f1) || cat VERSION)${INPUT_SUFFIX}
+version=${INPUT_PREFIX}$($INPUT_ONLY_MAJOR_VERSION && (cat ${INPUT_VERSION_FILE} | cut -d. -f1) || cat ${INPUT_VERSION_FILE})${INPUT_SUFFIX}
 message=$(echo $INPUT_MESSAGE | sed s/__VERSION__/$version/g)
 git config --global --add safe.directory /github/workspace
 git config user.name  || git config --local user.name $(git log -1 --pretty=format:'%an')

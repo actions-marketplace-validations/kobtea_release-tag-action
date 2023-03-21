@@ -22,6 +22,10 @@ inputs:
     description: Suffix for release tag
     required: false
     default: ''
+  version_file:
+    description: Path to VERSION file
+    required: false
+    default: VERSION
 outputs:
   tag:
     description: Name for release tag

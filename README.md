@@ -8,7 +8,7 @@ This GitHub Action watches the `VERSION` file, and if the tag with the same name
 
 This action expects
 
-- `VERSION` file exists at root directory of a repository
+- `VERSION` file exists in a repository
 - `VERISON` file contains only SemVer string
 
 ### Inputs
@@ -18,6 +18,7 @@ This action expects
 - `only_major_version`: Use only major version (default: `false`)
 - `prefix`: Prefix for release tag (default: `v`)
 - `suffix`: Suffix for release tag (default: `''`)
+- `version_file`: Path to VERSION file (default: `VERSION`)
 
 ### Outputs
 
